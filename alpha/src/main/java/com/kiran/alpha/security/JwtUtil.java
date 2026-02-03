@@ -16,6 +16,7 @@ public class JwtUtil {
             "my-super-secret-key-for-project-alpha-123456";
 
     private static final long EXPIRATION_TIME = 1000 * 60 * 60; // 1 hour
+    // private static final long EXPIRATION_TIME = 60; // 1 second (for testing)
 
     private Key getSigningKey() {
         return Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
